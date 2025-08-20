@@ -9,5 +9,7 @@ function iniquity_expdiag(e, method, who, ...)
     s:afflict(...)
   elseif method == "confirm" then
     s:confirm(afflictions[1])
+  elseif method == "defstrip" then
+    s.defences[afflictions[1]] = nil
   end
 end

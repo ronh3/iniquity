@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Shield Raze",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multielineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\S+ razes? (.+)'s magical shield",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ whips up a raging gale of wind, sending it towards (\\S+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Impossibly fast, \\S+ brings a magma-wreathed fist around, driving it straight through the magical shield surrounding (\\S+) without visible effort\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ conjures a blade of ice and drives it straight through the translucent shield surrounding (\\S+), the protection exploding in a shower of prismatic shards\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The magical shield surrounding (\\S+) suddenly shatters for no visible reason, flames spontaneously igniting upon \\w+ skin\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ sends myriad russet streams towards (\\S+), shattering \\S+ shield\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+'s Baalzadeen stares passively, but powerfully, at (\\S+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+'?s? daegger flings itself at (\\S+)'s translucent shield, piercing through it and causing it to fade\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ unleashe?s? a burst of Shin energy at (\\S+), tearing apart \\w+ translucent shield\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The shadow of \\S+ suddenly comes alive, leaping forward to hammer at the magical shield surrounding (\\S+) in a silent frenzy of blows\\. \\w+ protection lasts mere moments before exploding in a shower of prismatic shards\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^As \\S+ speaks a terrible word of power, the magical shield surrounding (\\S+) shatters into prismatic shards\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ dismissively flicks \\w+ tail at (\\S+), annihilating the magical shield surrounding \\w+ with casual ease\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ casts a spell of erosion at (\\S+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Huge boulders hammer at the magical shield surrounding (\\S+), shattering it in a spray of translucent shards\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "The end of \\S+'s staff smashes the magical shield surrounding (\\S+) in an explosion of translucent shards\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The magical shield surrounding (\\S+) explodes into translucent shards without visible reason or cause\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\S+ flays? away (\\S+)'s shield defence\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": "raiseEvent('iniquity', 'defstrip', matches[2], 'shield')"
+  }
+]
