@@ -63,6 +63,6 @@
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'parasite', 'healthleech', 'manaleech')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[1][2], 'parasite', 'healthleech', 'manaleech')"
        }
 ]
