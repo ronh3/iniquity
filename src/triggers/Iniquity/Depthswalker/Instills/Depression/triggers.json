@@ -67,6 +67,6 @@
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'depression', 'nausea', 'hypochondria', 'anorexia', 'masochism')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'depression', 'nausea', 'hypochondria', 'anorexia', 'masochism')"
        }
 ]
