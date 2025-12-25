@@ -1,8 +1,8 @@
 {
        "package": "Iniquity",
-       "title": "",
-       "description": "",
-       "version": "",
+       "title": "Iniquity Aff Tracking",
+       "description": "Tracks 3rd party afflictions.",
+       "version": "1.0.0",
        "author": "",
        "icon": "",
        "dependencies": "",
