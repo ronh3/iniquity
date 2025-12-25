@@ -709,10 +709,6 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "The protective coating covering the skin of",
-                            "type": "startOfLine"
-                     },
-                     {
                             "pattern": "^The protective coating covering the skin of (\\S+) sloughs off\\.$",
                             "type": "regex"
                      }

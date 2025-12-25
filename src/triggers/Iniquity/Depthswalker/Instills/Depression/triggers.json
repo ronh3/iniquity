@@ -21,7 +21,7 @@
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', matches[2], 'depression', 'nausea', 'hypochondria')",
+              "script": "raiseEvent('iniquity', 'smart', multimatches[2][2], 'depression', 'nausea', 'hypochondria')",
               "children": [
                      {
                             "name": "Depression Looping",

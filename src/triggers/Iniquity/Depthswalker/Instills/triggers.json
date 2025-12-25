@@ -21,7 +21,7 @@
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'timeloop')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'timeloop')"
        },
        {
               "name": "Looped Instill",
