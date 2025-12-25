@@ -5,7 +5,7 @@ function iniquity_expdiag(e, method, who, ...)
     for _, aff in ipairs(afflictions) do
       s:afflict(aff)
     end
-  elseif method == "afflict smart" then
+  elseif method == "smart" then
     s:afflict(...)
   elseif method == "confirm" then
     s:confirm(afflictions[1])

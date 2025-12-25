@@ -7,6 +7,6 @@ Third-party class lines that raise an event, allowing any aff tracking to take a
 eg. `raiseEvent("iniquity", "afflict", matches[2], "paralysis", "dizziness")`
 
 * `"afflict"` method is "all of these affs"
-* `"afflict smart"` is "afflict x then y then z"
+* `"smart"` is "afflict x then y then z"
 * `"confirm"` confirms a single affliction
 * `"defstrip"` sets the single defense to false

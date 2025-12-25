@@ -1,1 +1,1 @@
-raiseEvent("iniquity", "afflict smart", matches[2], "stupidity", "impatience")
+raiseEvent("iniquity", "smart", matches[2], "stupidity", "impatience")
