@@ -573,10 +573,6 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "The raven dives at ",
-                            "type": "startOfLine"
-                     },
-                     {
                             "pattern": "^The raven dives at (\\S+) and pulls up short, making \\S+ uneasy\\.$",
                             "type": "regex"
                      }
