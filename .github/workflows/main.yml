@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v4
         id: upload
         with:
-          name: Subjugator-${{ steps.pkg.outputs.version }}
+          name: Iniquity-${{ steps.pkg.outputs.version }}
           path: build/tmp/
       
       - name: Post Artifact
