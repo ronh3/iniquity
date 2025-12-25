@@ -21,7 +21,7 @@
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', matches[2], 'justice', 'retribution')",
+              "script": "raiseEvent('iniquity', 'smart', multimatches[2][2], 'justice', 'retribution')",
               "children": [
                      {
                             "name": "Retribution Loop",
@@ -67,6 +67,6 @@
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'justice', 'retribution')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'justice', 'retribution')"
        }
 ]
