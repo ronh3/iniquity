@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ sweeps .+ overhead and a great wind rises, picking up (\\S+) and casting \\S+ violently about before hurling \\S+ back to the ground\\.$",
+                            "pattern": "^\\S+ sweeps .+ overhead and a great wind rises, picking up (?<victim>\\S+) and casting \\S+ violently about before hurling \\S+ back to the ground\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'paralysis', 'dizziness')"
        },
        {
               "name": "Emanate Water",
@@ -33,10 +33,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ makes the slightest flick with .+, and like the hand of some angered titan a great wave of water descends to smash down upon (\\S+)\\.$",
+                            "pattern": "^\\S+ makes the slightest flick with .+, and like the hand of some angered titan a great wave of water descends to smash down upon (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'frozen', 'disrupted')"
        }
 ]

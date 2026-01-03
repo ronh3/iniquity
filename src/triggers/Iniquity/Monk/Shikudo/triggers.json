@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The staff smashes into the face of (\\S+) with a sickening crunch\\.$",
+                            "pattern": "^The staff smashes into the face of (?<victim>\\S+) with a sickening crunch\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'anorexia')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'anorexia')"
        },
        {
               "name": "Hiru Dizziness",
@@ -33,11 +33,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The staff connects to the side of (\\S+)'s head with a resounding crack\\.$",
+                            "pattern": "^The staff connects to the side of (?<victim>\\S+)'s head with a resounding crack\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'dizziness')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'dizziness')"
        },
        {
               "name": "Livestrike asthma",
@@ -53,11 +53,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The breath of (\\S+) leaves \\S+ in an explosive gasp as the end of the staff smashes home\\.$",
+                            "pattern": "^The breath of (?<victim>\\S+) leaves \\S+ in an explosive gasp as the end of the staff smashes home\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'asthma')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'asthma')"
        },
        {
               "name": "Needle crushedthroat",
@@ -73,11 +73,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The end of the staff smashes into the exposed throat of (\\S+), crushing cartilage\\.$",
+                            "pattern": "^The end of the staff smashes into the exposed throat of (?<victim>\\S+), crushing cartilage\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'crushedthroat')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'crushedthroat')"
        },
        {
               "name": "Ruku Slickness",
@@ -93,10 +93,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) staggers as the staff cracks across \\S+ ribs, sweat breaking out upon \\S+ forehead\\.$",
+                            "pattern": "^(?<victim>\\S+) staggers as the staff cracks across \\S+ ribs, sweat breaking out upon \\S+ forehead\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'slickness')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'slickness')"
        }
 ]

@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) stumbles clumsily as the blow lands.$",
+                            "pattern": "^(?<victim>\\S+) stumbles clumsily as the blow lands.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'clumsiness')"
        },
        {
               "name": "Hailstone (epilepsy)",
@@ -33,14 +33,14 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) begins to shake uncontrollably.$",
+                            "pattern": "^(?<victim>\\S+) begins to shake uncontrollably.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'epilepsy')"
        },
        {
-              "name": "Hailstone (imaptience)",
+              "name": "Hailstone (impatience)",
               "isActive": "yes",
               "isFolder": "no",
               "multiline": "no",
@@ -53,11 +53,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A puzzled expression crosses the face of (\\S+).$",
+                            "pattern": "^A puzzled expression crosses the face of (?<victim>\\S+).$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'impatience')"
        },
        {
               "name": "Waterspout",
@@ -73,10 +73,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) begins to thrash at the water enveloping \\S+\\.$",
+                            "pattern": "^(?<victim>\\S+) begins to thrash at the water enveloping \\S+\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'confusion', 'dizziness', 'vertigo')"
        }
 ]

@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) is gripped with fear, staring out with terrified eyes\\.$",
+                            "pattern": "^(?<victim>\\S+) is gripped with fear, staring out with terrified eyes\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'agoraphobia')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'agoraphobia')"
        },
        {
               "name": "Asleep",
@@ -33,11 +33,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+)'s eyes close suddenly as \\S+ falls asleep\\.$",
+                            "pattern": "^(?<victim>\\S+)'s eyes close suddenly as \\S+ falls asleep\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) tosses back and forth in restless slumber\\.$",
+                            "pattern": "^(?<victim>\\S+) tosses back and forth in restless slumber\\.$",
                             "type": "regex"
                      }
               ],
@@ -57,7 +57,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ glows with an emerald hue and snaps \\S+ fingers at (\\S+)\\.$",
+                            "pattern": "^\\S+ glows with an emerald hue and snaps \\S+ fingers at (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
@@ -77,23 +77,23 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) wakes up with a gasp of pain\\.$",
+                            "pattern": "^(?<victim>\\S+) wakes up with a gasp of pain\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) opens \\S+ eyes and stretches languidly, a smile on \\S+ face\\.$",
+                            "pattern": "^(?<victim>\\S+) opens \\S+ eyes and stretches languidly, a smile on \\S+ face\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) opens \\S+ eyes and yawns mightily\\.$",
+                            "pattern": "^(?<victim>\\S+) opens \\S+ eyes and yawns mightily\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) awakens with a start\\.$",
+                            "pattern": "^(?<victim>\\S+) awakens with a start\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) opens \\S+ eyes and yawns mightily\\.$",
+                            "pattern": "^(?<victim>\\S+) opens \\S+ eyes and yawns mightily\\.$",
                             "type": "regex"
                      }
               ],
@@ -113,7 +113,7 @@
               "highlightBG": "#55ffff",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) falls to \\S+ knees and clutches \\S+ ears as the shaft of sound strikes (\\S+)\\.$",
+                            "pattern": "^(?<victim>\\S+) falls to \\S+ knees and clutches \\S+ ears as the shaft of sound strikes (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
@@ -133,7 +133,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The bees sting (\\S+) into paralysis\\.$",
+                            "pattern": "^The bees sting (?<victim>\\S+) into paralysis\\.$",
                             "type": "regex"
                      }
               ],
@@ -153,7 +153,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) blinks slowly, and begins to tremble\\.$",
+                            "pattern": "^(?<victim>\\S+) blinks slowly, and begins to tremble\\.$",
                             "type": "regex"
                      }
               ],
@@ -173,11 +173,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) begins to pant in terror\\.$",
+                            "pattern": "^(?<victim>\\S+) begins to pant in terror\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'claustrophobia')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'claustrophobia')"
        },
        {
               "name": "Confusion",
@@ -193,11 +193,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) looks about bemusedly\\.$",
+                            "pattern": "^(?<victim>\\S+) looks about bemusedly\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'confusion')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'confusion')"
        },
        {
               "name": "Darkshade",
@@ -213,15 +213,15 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) stiffens suddenly, \\S+ features a masque frozen in agony\\.$",
+                            "pattern": "^(?<victim>\\S+) stiffens suddenly, \\S+ features a masque frozen in agony\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) lets out a piercing scream, as if wounded by the very sunlight\\.$",
+                            "pattern": "^(?<victim>\\S+) lets out a piercing scream, as if wounded by the very sunlight\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'darkshade')"
+              "script": "raiseEvent('iniquity', 'confirm', matches.victim, 'darkshade')"
        },
        {
               "name": "Deafness",
@@ -241,7 +241,7 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "A brief look of concentration crosses the face of (\\S+)",
+                            "pattern": "A brief look of concentration crosses the face of (?<victim>\\S+)",
                             "type": "regex"
                      }
               ],
@@ -261,7 +261,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The side of (\\S+)'s head is lightly struck by \\S+'s rapier\\.$",
+                            "pattern": "^The side of (?<victim>\\S+)'s head is lightly struck by \\S+'s rapier\\.$",
                             "type": "regex"
                      }
               ],
@@ -281,11 +281,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) stares about \\S+ frenziedly, wild\\-eyed\\.$",
+                            "pattern": "^(?<victim>\\S+) stares about \\S+ frenziedly, wild\\-eyed\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'dementia')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'dementia')"
        },
        {
               "name": "Epilepsy",
@@ -301,11 +301,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) begins to jerk and shake violently, foaming at the mouth\\.$",
+                            "pattern": "^(?<victim>\\S+) begins to jerk and shake violently, foaming at the mouth\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'epilepsy')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'epilepsy')"
        },
        {
               "name": "Frozen Disrupt",
@@ -321,7 +321,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) shivers particularly intensely\\.$",
+                            "pattern": "^(?<victim>\\S+) shivers particularly intensely\\.$",
                             "type": "regex"
                      }
               ],
@@ -341,7 +341,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) seems able to move more freely all of a sudden\\.$",
+                            "pattern": "^(?<victim>\\S+) seems able to move more freely all of a sudden\\.$",
                             "type": "regex"
                      }
               ],
@@ -361,11 +361,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) suddenly appears tired all of a sudden\\.$",
+                            "pattern": "^(?<victim>\\S+) suddenly appears tired all of a sudden\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'hypersomnia')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'hypersomnia')"
        },
        {
               "name": "Impatience",
@@ -381,19 +381,19 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) shuffles (\\S+) feet in boredom\\.$",
+                            "pattern": "^(?<victim>\\S+) shuffles \\S+ feet in boredom\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) suddenly starts scratching at an itch like mad\\.$",
+                            "pattern": "^(?<victim>\\S+) suddenly starts scratching at an itch like mad\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^\\S+ eyes gleaming, \\S+ smiles and quickly sings a jaunty limerick at (\\S+)\\.$",
+                            "pattern": "^\\S+ eyes gleaming, \\S+ smiles and quickly sings a jaunty limerick at (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'impatience')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'impatience')"
        },
        {
               "name": "Masochism",
@@ -409,27 +409,23 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) drives a clenched fist into \\S+ gut\\.$",
+                            "pattern": "^(?<victim>\\S+) drives a clenched fist into \\S+ gut\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) uses \\S+ right foot to stomp on \\S+ left as hard as possible\\.$",
+                            "pattern": "^(?<victim>\\S+) smiles as \\S+ rams \\S+ fist into \\S+ jaw\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) smiles as \\S+ rams \\S+ fist into \\S+ jaw\\.$",
+                            "pattern": "^With the heel of \\S+ palm, (?<victim>\\S+) smacks \\S+ upside the head\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^With the heel of \\S+ palm, (\\S+) smacks \\S+ upside the head\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\S+) uses \\S+ \\S+ foot to stomp on \\S+ \\S+ as hard as possible\\.$",
+                            "pattern": "^(?<victim>\\S+) uses \\S+ \\S+ foot to stomp on \\S+ \\S+ as hard as possible\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'masochism')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'masochism')"
        },
        {
               "name": "Mickey",
@@ -445,7 +441,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) pops a mickey into \\S+ mouth\\.$",
+                            "pattern": "^(?<victim>\\S+) pops a mickey into \\S+ mouth\\.$",
                             "type": "regex"
                      }
               ],
@@ -465,7 +461,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^Ethereal bonds flash forth to bind (\\S+) as \\S+ gaze falls upon a nairat rune\\.$",
+                            "pattern": "^Ethereal bonds flash forth to bind (?<victim>\\S+) as \\S+ gaze falls upon a nairat rune\\.$",
                             "type": "regex"
                      }
               ],
@@ -485,11 +481,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) doubles over, vomiting violently\\.$",
+                            "pattern": "^(?<victim>\\S+) doubles over, vomiting violently\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'confirm', matches[2], 'nausea')"
+              "script": "raiseEvent('iniquity', 'confirm', matches.victim, 'nausea')"
        },
        {
               "name": "Nausea",
@@ -505,11 +501,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) sways unsteadily as \\S+ face turns an unpleasant shade of green\\.$",
+                            "pattern": "^(?<victim>\\S+) sways unsteadily as \\S+ face turns an unpleasant shade of green\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'nausea')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'nausea')"
        },
        {
               "name": "Paralysis",
@@ -525,39 +521,39 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^Horror overcomes (\\S+)'s face as (\\S+) body stiffens into paralysis\\.$",
+                            "pattern": "^Horror overcomes (?<victim>\\S+)'s face as \\S+ body stiffens into paralysis\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) stiffens suddenly, \\S+ features a masque frozen in agony\\.$",
+                            "pattern": "^(?<victim>\\S+) stiffens suddenly, \\S+ features a masque frozen in agony\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+)'s body stiffens rapidly with paralysis\\.$",
+                            "pattern": "^(?<victim>\\S+)'s body stiffens rapidly with paralysis\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^The body of (\\S+) locks in paralysis as \\S+ directs a short burst of arcane power in \\S+ direction\\.$",
+                            "pattern": "^The body of (?<victim>\\S+) locks in paralysis as \\S+ directs a short burst of arcane power in \\S+ direction\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^Lunging to the side, \\S+ brings \\S+ shield around to smash into the spine of (\\S+)\\.$",
+                            "pattern": "^Lunging to the side, \\S+ brings \\S+ shield around to smash into the spine of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^\\S+ recites an epic tale of the heroism of Nicator to (\\S+)\\.$",
+                            "pattern": "^\\S+ recites an epic tale of the heroism of Nicator to (?<victim>\\S+)\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^Horror overcomes the face of (\\S+) as \\S+ body locks in paralysis\\.$",
+                            "pattern": "^Horror overcomes the face of (?<victim>\\S+) as \\S+ body locks in paralysis\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+)'s limbs suddenly lock up\\.$",
+                            "pattern": "^(?<victim>\\S+)'s limbs suddenly lock up\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'paralysis')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'paralysis')"
        },
        {
               "name": "Paranoia",
@@ -573,11 +569,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The raven dives at (\\S+) and pulls up short, making \\S+ uneasy\\.$",
+                            "pattern": "^The raven dives at (?<victim>\\S+) and pulls up short, making \\S+ uneasy\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'paranoia')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'paranoia')"
        },
        {
               "name": "Peace",
@@ -593,11 +589,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+)'s eyes are filled with compassion and peace\\.$",
+                            "pattern": "^(?<victim>\\S+)'s eyes are filled with compassion and peace\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'peace')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'peace')"
        },
        {
               "name": "Prone",
@@ -613,83 +609,83 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^Sweeping out with a blade hand, \\S+l strikes at the back of (\\S+)'s knee\\.$",
+                            "pattern": "^Sweeping out with a blade hand, \\S+l strikes at the back of (?<victim>\\S+)'s knee\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^Drawing an enormous breath, \\S+ exhales, expelling a gale of wind with such force that (\\S+) is knocked over\\.$",
+                            "pattern": "^Drawing an enormous breath, \\S+ exhales, expelling a gale of wind with such force that (?<victim>\\S+) is knocked over\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) is knocked forcefully off \\S+ feet by the impact of \\S+'s huge tail\\.$",
+                            "pattern": "^(?<victim>\\S+) is knocked forcefully off \\S+ feet by the impact of \\S+'s huge tail\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+)'s eyes close suddenly as \\S+ falls asleep\\.$",
+                            "pattern": "^(?<victim>\\S+)'s eyes close suddenly as \\S+ falls asleep\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) is knocked off \\S+ feet by the heaving ground\\.$",
+                            "pattern": "^(?<victim>\\S+) is knocked off \\S+ feet by the heaving ground\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^\\S+ throws \\S+ palms forward, releasing a stream of deadly blue light to cripple (\\S+)\\.$",
+                            "pattern": "^\\S+ throws \\S+ palms forward, releasing a stream of deadly blue light to cripple (?<victim>\\S+)\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^You hear two loud snaps and see (\\S+) fall to the ground\\.$",
+                            "pattern": "^You hear two loud snaps and see (?<victim>\\S+) fall to the ground\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^The staff sweeps the legs out from under (\\S+), sending \\S+ sprawling\\.$",
+                            "pattern": "^The staff sweeps the legs out from under (?<victim>\\S+), sending \\S+ sprawling\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^\\S+ drops low, tangling .+ with the legs of (\\S+) and sending \\S+ sprawling\\.$",
+                            "pattern": "^\\S+ drops low, tangling .+ with the legs of (?<victim>\\S+) and sending \\S+ sprawling\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^\\S+ drops to the floor and sweeps \\S+ legs round at (\\S+)\\.$",
+                            "pattern": "^\\S+ drops to the floor and sweeps \\S+ legs round at (?<victim>\\S+)\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) slips on a thin layer of fluid, \\S+ feet flying out from under \\S+\\.$",
+                            "pattern": "^(?<victim>\\S+) slips on a thin layer of fluid, \\S+ feet flying out from under \\S+\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^Water thunders down upon (\\S+), driving \\S+ relentlessly to \\S+ knees\\.$",
+                            "pattern": "^Water thunders down upon (?<victim>\\S+), driving \\S+ relentlessly to \\S+ knees\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^The \\S+ leg of (\\S+) buckles under the impact, and \\S+ goes sprawling\\.$",
+                            "pattern": "^The \\S+ leg of (?<victim>\\S+) buckles under the impact, and \\S+ goes sprawling\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": " ^\\S+ lunges downward, slamming the edge of .* into the shins of (\\S+)\\.$",
+                            "pattern": " ^\\S+ lunges downward, slamming the edge of .* into the shins of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^Sweeping out with a blade hand, \\S+ strikes at the back of (\\S+)'s knee\\.$",
+                            "pattern": "^Sweeping out with a blade hand, \\S+ strikes at the back of (?<victim>\\S+)'s knee\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) is flung violently from \\S+ feet\\.$",
+                            "pattern": "^(?<victim>\\S+) is flung violently from \\S+ feet\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) has already fallen to the ground\\.$",
+                            "pattern": "^(?<victim>\\S+) has already fallen to the ground\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) is swept off \\S+ feet by the blast\\.$",
+                            "pattern": "^(?<victim>\\S+) is swept off \\S+ feet by the blast\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^A mighty, bestial roar from \\S+ leaves (\\S+) looking dazed\\.$",
+                            "pattern": "^A mighty, bestial roar from \\S+ leaves (?<victim>\\S+) looking dazed\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) goes down in a tangle of limbs as \\S+ legs are swept out from under \\S+\\.$",
+                            "pattern": "^(?<victim>\\S+) goes down in a tangle of limbs as \\S+ legs are swept out from under \\S+\\.$",
                             "type": "regex"
                      }
               ],
@@ -709,11 +705,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The protective coating covering the skin of (\\S+) sloughs off\\.$",
+                            "pattern": "^The protective coating covering the skin of (?<victim>\\S+) sloughs off\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'slickness')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'slickness')"
        },
        {
               "name": "Snake Bite",
@@ -729,15 +725,15 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^An .* sinks its fangs into the neck of (\\S+), injecting a potent dose of toxin\\.$",
+                            "pattern": "^An .* sinks its fangs into the neck of (?<victim>\\S+), injecting a potent dose of toxin\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^A .* sinks its fangs into the neck of (\\S+), injecting a potent dose of toxin\\.$",
+                            "pattern": "^A .* sinks its fangs into the neck of (?<victim>\\S+), injecting a potent dose of toxin\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'fratricide')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'fratricide')"
        },
        {
               "name": "Stupidity",
@@ -753,71 +749,71 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^Tears fill (\\S+)'s eyes and begin to slowly run down (\\S+) face\\.$",
+                            "pattern": "^Tears fill (?<victim>\\S+)'s eyes and begin to slowly run down (?<victim>\\S+) face\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) flaps (\\S+) arms madly\\.$",
+                            "pattern": "^(?<victim>\\S+) flaps (?<victim>\\S+) arms madly\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) stumbles and pokes (\\S+) in the eye\\.$",
+                            "pattern": "^(?<victim>\\S+) stumbles and pokes (?<victim>\\S+) in the eye\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) makes a strangled meowing noise and quickly shuts up, blushing\\.$",
+                            "pattern": "^(?<victim>\\S+) makes a strangled meowing noise and quickly shuts up, blushing\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) picks (\\S+) nose absently\\.$",
+                            "pattern": "^(?<victim>\\S+) picks (?<victim>\\S+) nose absently\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) breaks down and sobs uncontrollably\\.$",
+                            "pattern": "^(?<victim>\\S+) breaks down and sobs uncontrollably\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) gets down on one knee and serenades the world\\.$",
+                            "pattern": "^(?<victim>\\S+) gets down on one knee and serenades the world\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) falls to his knees in worship\\.$",
+                            "pattern": "^(?<victim>\\S+) falls to his knees in worship\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) grunts a bit and then lets out a loud \\\"OINK\\!\\\"$",
+                            "pattern": "^(?<victim>\\S+) grunts a bit and then lets out a loud \\\"OINK\\!\\\"$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) wails like an old woman\\.$",
+                            "pattern": "^(?<victim>\\S+) wails like an old woman\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) moans, holding his head\\.$",
+                            "pattern": "^(?<victim>\\S+) moans, holding his head\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^You cast a net of stupidity over (\\S+)'s mind\\.$",
+                            "pattern": "^You cast a net of stupidity over (?<victim>\\S+)'s mind\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) twitches spasmodically\\.$",
+                            "pattern": "^(?<victim>\\S+) twitches spasmodically\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) fondles \\S+ absently\\.$",
+                            "pattern": "^(?<victim>\\S+) fondles \\S+ absently\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) lets out a loud, long \\\"MOOOOOOOOOOO\\!\\\"$",
+                            "pattern": "^(?<victim>\\S+) lets out a loud, long \\\"MOOOOOOOOOOO\\!\\\"$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) attempts to do a standing backflip, but merely stumbles over \\S+ own feet\\.$",
+                            "pattern": "^(?<victim>\\S+) attempts to do a standing backflip, but merely stumbles over \\S+ own feet\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'stupidity')"
+              "script": "raiseEvent('iniquity', 'confirm', matches.victim, 'stupidity')"
        },
        {
               "name": "Target Standing",
@@ -833,15 +829,15 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) stands up\\.$",
+                            "pattern": "^(?<victim>\\S+) stands up\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) rolls smoothly back to \\S+ feet\\.$",
+                            "pattern": "^(?<victim>\\S+) rolls smoothly back to \\S+ feet\\.$",
                             "type": "regex"
                      },
                      {
-                            "pattern": "^(\\S+) pushes off the ground, coming back up into a guard position\\.$",
+                            "pattern": "^(?<victim>\\S+) pushes off the ground, coming back up into a guard position\\.$",
                             "type": "regex"
                      }
               ],
@@ -861,10 +857,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^.+ (crushes|pulverises|smashes|breaks) the (.+) of (\\S+)\\.$",
+                            "pattern": "^.+ (crushes|pulverises|smashes|breaks) the (?<limb>.+) of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[4], f'broken{matches[3]}')"
+              "script": ""
        }
 ]

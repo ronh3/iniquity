@@ -13,10 +13,10 @@
          "highlightBG": "#ffff00",
          "patterns": [
                 {
-                       "pattern": "^Golden chains of light coalesce in the hands of \\S+, and \\S+ casts them out to bind (\\S+) to \\S+\\.$",
+                       "pattern": "^Golden chains of light coalesce in the hands of \\S+, and \\S+ casts them out to bind (?<victim>\\S+) to \\S+\\.$",
                        "type": "regex"
                 }
          ],
-         "script": ""
+         "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'lightbind')"
   }
 ]

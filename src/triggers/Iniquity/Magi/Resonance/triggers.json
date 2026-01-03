@@ -13,7 +13,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A loud crack emanates from the (.+) of (\\S+)\\.$",
+                            "pattern": "^A loud crack emanates from the (?<limb>.+) of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
@@ -33,11 +33,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) buckles under an unseen blow\\.$",
+                            "pattern": "^(?<victim>\\S+) buckles under an unseen blow\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'paralysis')"
        },
        {
               "name": "Earth 3 3p",
@@ -53,11 +53,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) hacks and coughs as a series of unpleasant cracks sound in grim staccato from \\S+ chest\\.$",
+                            "pattern": "^(?<victim>\\S+) hacks and coughs as a series of unpleasant cracks sound in grim staccato from \\S+ chest\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'crackedribs')"
        },
        {
               "name": "Air 1 3p",
@@ -73,11 +73,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) clutches at \\S+ throat as \\S+ gasps for breath\\.$",
+                            "pattern": "^(?<victim>\\S+) clutches at \\S+ throat as \\S+ gasps for breath\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'asthma')"
        },
        {
               "name": "Air 2 3p",
@@ -93,11 +93,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A vicious wind rises, lashing and flaying at the body of (\\S+) to leave \\S+ sensitive and raw\\.$",
+                            "pattern": "^A vicious wind rises, lashing and flaying at the body of (?<victim>\\S+) to leave \\S+ sensitive and raw\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'sensitivity')"
        },
        {
               "name": "Air 3 3p",
@@ -113,11 +113,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A dreadful pallor overcomes the features of (\\S+)\\.$",
+                            "pattern": "^A dreadful pallor overcomes the features of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'healthleech')"
        },
        {
               "name": "Fire 2 3p",
@@ -133,11 +133,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The air between \\S+ and (\\S+) ripple with a haze of heat, and flames ignite upon the skin of \\S+\\.$",
+                            "pattern": "^The air between \\S+ and (?<victim>\\S+) ripple with a haze of heat, and flames ignite upon the skin of \\S+\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'smart', matches.victim, 'scalded', 'burning')"
        },
        {
               "name": "Fire 3 3p",
@@ -153,11 +153,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^Blisters burst open across the body of (\\S+) as \\S+ skin glows as if lit from within\\.$",
+                            "pattern": "^Blisters burst open across the body of (?<victim>\\S+) as \\S+ skin glows as if lit from within\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'smart', matches.victim, 'blistered', 'burning')"
        },
        {
               "name": "Water 1p 3p",
@@ -173,11 +173,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A freezing wave of water materialises as if from nothing, crashing down upon (\\S+)\\.$",
+                            "pattern": "^A freezing wave of water materialises as if from nothing, crashing down upon (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'frostbite')"
        },
        {
               "name": "Water 2 3p",
@@ -193,11 +193,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A flurry of freezing icicles materialise to slash at (\\S+) in a shower of freezing daggers\\.$",
+                            "pattern": "^A flurry of freezing icicles materialise to slash at (?<victim>\\S+) in a shower of freezing daggers\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'stuttering')"
        },
        {
               "name": "Water 3 3p",
@@ -213,10 +213,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ makes no motion or word, but (\\S+) turns shockingly pale and staggers as if struck\\.$",
+                            "pattern": "^\\S+ makes no motion or word, but (?<victim>\\S+) turns shockingly pale and staggers as if struck\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'anorexia')"
        }
 ]

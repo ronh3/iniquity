@@ -17,11 +17,11 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^As the weapon strikes (\\S+), it burns with a sickly yellow glow\\.$",
+                            "pattern": "^As the weapon strikes (?<victim>\\S+), it burns with a sickly yellow glow\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', multimatches[2][2], 'depression', 'nausea', 'hypochondria')",
+              "script": "raiseEvent('iniquity', 'smart', multimatches[2].victim, 'depression', 'nausea', 'hypochondria')",
               "children": [
                      {
                             "name": "Depression Looping",
@@ -37,11 +37,11 @@
                             "highlightBG": "#ffff00",
                             "patterns": [
                                    {
-                                          "pattern": "^A grey miasma flares around (\\S+)\\.$",
+                                          "pattern": "^A grey miasma flares around (?<victim>\\S+)\\.$",
                                           "type": "regex"
                                    }
                             ],
-                            "script": "raiseEvent('iniquity', 'smart', matches[2], 'depression', 'nausea', 'hypochondria')"
+                            "script": "raiseEvent('iniquity', 'smart', matches.victim, 'depression', 'nausea', 'hypochondria')"
                      }
               ]
        },
@@ -63,10 +63,10 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^A look of total despair crosses the face of (\\S+)\\.$",
+                            "pattern": "^A look of total despair crosses the face of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'depression', 'nausea', 'hypochondria', 'anorexia', 'masochism')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[2].victim, 'depression', 'nausea', 'hypochondria', 'anorexia', 'masochism')"
        }
 ]

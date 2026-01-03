@@ -13,11 +13,11 @@
         "highlightBG": "#ffff00",
         "patterns": [
             {
-                "pattern": "^A grumpy badger carves great gouges in the flesh of (\\S+) with its claws\\.$",
+                "pattern": "^A grumpy badger carves great gouges in the flesh of (?<victim>\\S+) with its claws\\.$",
                 "type": "regex"
             }
         ],
-        "script": "raiseEvent('iniquity', 'afflict', matches[2], 'addiction')"
+        "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'addiction')"
     },
     {
         "name": "Butterfly Dizziness",
@@ -33,11 +33,11 @@
         "highlightBG": "#ffff00",
         "patterns": [
             {
-                "pattern": "^A gossamer butterfly goes into a frenzy of motion in front of the eyes of (\\S+), and \\S+ sways unsteadily\\.$",
+                "pattern": "^A gossamer butterfly goes into a frenzy of motion in front of the eyes of (?<victim>\\S+), and \\S+ sways unsteadily\\.$",
                 "type": "regex"
             }
         ],
-        "script": "raiseEvent('iniquity', 'afflict', matches[2], 'dizziness')"
+        "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'dizziness')"
     },
     {
         "name": "Fox HealthLeech",
@@ -53,11 +53,11 @@
         "highlightBG": "#ffff00",
         "patterns": [
             {
-                "pattern": "^A cunning red fox leaps upon (\\S+), sinking its teeth into \\S+ skin\\.$",
+                "pattern": "^A cunning red fox leaps upon (?<victim>\\S+), sinking its teeth into \\S+ skin\\.$",
                 "type": "regex"
             }
         ],
-        "script": "raiseEvent('iniquity', 'afflict', matches[2], 'healthleech')"
+        "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'healthleech')"
     },
     {
         "name": "Raven",
@@ -73,11 +73,11 @@
         "highlightBG": "#ffff00",
         "patterns": [
             {
-                "pattern": "^An ebony raven dives down upon (\\S+), pecking at \\S+ face and eyes\\.$",
+                "pattern": "^An ebony raven dives down upon (?<victim>\\S+), pecking at \\S+ face and eyes\\.$",
                 "type": "regex"
             }
         ],
-        "script": "raiseEvent('iniquity', 'afflict', matches[2], 'sensitivity')"
+        "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'sensitivity')"
     },
     {
         "name": "Wolf Hallucinations",
@@ -93,11 +93,11 @@
         "highlightBG": "#ffff00",
         "patterns": [
             {
-                "pattern": "^A grey wolf lets out a baying howl at (\\S+)\\.$",
+                "pattern": "^A grey wolf lets out a baying howl at (?<victim>\\S+)\\.$",
                 "type": "regex"
             }
         ],
-        "script": "raiseEvent('iniquity', 'afflict', matches[2], 'hallucinations')"
+        "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'hallucinations')"
     },
     {
         "name": "badger Asthma",
@@ -113,10 +113,10 @@
         "highlightBG": "#ffff00",
         "patterns": [
             {
-                "pattern": "^A grumpy badger lunges at (\\S+), claws raking across \\S+ throat\\.$",
+                "pattern": "^A grumpy badger lunges at (?<victim>\\S+), claws raking across \\S+ throat\\.$",
                 "type": "regex"
             }
         ],
-        "script": "raiseEvent('iniquity', 'afflict', matches[2], 'asthma')"
+        "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'asthma')"
     }
 ]

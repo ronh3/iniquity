@@ -13,11 +13,11 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^An agonised expression contorts the face of (\\S+)\\.$",
+        "pattern": "^An agonised expression contorts the face of (?<victim>\\S+)\\.$",
         "type": "regex"
       }
     ],
-    "script": ""
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'haemophilia')"
   },
   {
     "name": "Torment",
@@ -33,11 +33,11 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^(\\S+) lets out a groan as \\S+ life is siphoned by the might of Evil\\.$",
+        "pattern": "^(?<victim>\\S+) lets out a groan as \\S+ life is siphoned by the might of Evil\\.$",
         "type": "regex"
       }
     ],
-    "script": ""
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'healthleech')"
   },
   {
     "name": "Exploit",
@@ -53,10 +53,10 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^(\\S+) sags like a puppet with its strings cut, \\S+ eyes twitching madly as \\S+ stares about in all directions\\.$",
+        "pattern": "^(?<victim>\\S+) sags like a puppet with its strings cut, \\S+ eyes twitching madly as \\S+ stares about in all directions\\.$",
         "type": "regex"
       }
     ],
-    "script": ""
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'weariness', 'paranoia')"
   }
 ]

@@ -13,11 +13,11 @@
          "highlightBG": "#ffff00",
          "patterns": [
                 {
-                       "pattern": "^\\S+ delivers a backhanded blow to the face of (\\S+) with a translucent mace\\.$",
+                       "pattern": "^\\S+ delivers a backhanded blow to the face of (?<victim>\\S+) with a translucent mace\\.$",
                        "type": "regex"
                 }
          ],
-         "script": ""
+         "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'dizziness', 'stupidity')"
   },
   {
          "name": "Deathblow",
@@ -33,11 +33,11 @@
          "highlightBG": "#ffff00",
          "patterns": [
                 {
-                       "pattern": "^Almost too swift to perceive, \\S+ lashes out with a translucent dagger, tracing a bloody line across the throat of (\\S+)\\.$",
+                       "pattern": "^Almost too swift to perceive, \\S+ lashes out with a translucent dagger, tracing a bloody line across the throat of (?<victim>\\S+)\\.$",
                        "type": "regex"
                 }
          ],
-         "script": ""
+         "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'asthma')"
   },
   {
          "name": "Exsanguinate",
@@ -53,11 +53,11 @@
          "highlightBG": "#ffff00",
          "patterns": [
                 {
-                       "pattern": "^\\S+ drives a translucent sword into the guts of (\\S+) with a brutal thrust, ripping it free in a spray of crimson\\.$",
+                       "pattern": "^\\S+ drives a translucent sword into the guts of (?<victim>\\S+) with a brutal thrust, ripping it free in a spray of crimson\\.$",
                        "type": "regex"
                 }
          ],
-         "script": ""
+         "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'nausea')"
   },
   {
          "name": "Puncture",
@@ -73,11 +73,11 @@
          "highlightBG": "#ffff00",
          "patterns": [
                 {
-                       "pattern": "^\\S+ lashes out with lightning speed, \\S+ blade driving into (\\S+) just beneath \\w+ (?:left|right) shoulder\\.$",
+                       "pattern": "^\\S+ lashes out with lightning speed, \\S+ blade driving into (?<victim>\\S+) just beneath \\w+ (?:left|right) shoulder\\.$",
                        "type": "regex"
                 }
          ],
-         "script": ""
+         "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'weariness')"
   },
   {
        "name": "Overhand",
@@ -93,11 +93,11 @@
        "highlightBG": "#ffff00",
        "patterns": [
               {
-                     "pattern": "^\\S+ brings a translucent mace around in a savage overhand strike, smashing it into the head of (\\S+)\\.$",
+                     "pattern": "^\\S+ brings a translucent mace around in a savage overhand strike, smashing it into the head of (?<victim>\\S+)\\.$",
                      "type": "regex"
               }
        ],
-       "script": ""
+       "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'stupidity', 'impatience')"
   },
   {
        "name": "Sever",
@@ -113,10 +113,10 @@
        "highlightBG": "#ffff00",
        "patterns": [
               {
-                     "pattern": "^\\S+ severs the muscles in the (?:left|right) arm of (\\S+) with a precise blow of \\S+ translucent sword\\.$",
+                     "pattern": "^\\S+ severs the muscles in the (?:left|right) arm of (?<victim>\\S+) with a precise blow of \\S+ translucent sword\\.$",
                      "type": "regex"
               }
        ],
-       "script": ""
+       "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'clumsiness')"
 }
 ]

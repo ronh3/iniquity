@@ -1,1 +1,0 @@
-raiseEvent("iniquity", "smart", matches[2], "fulminated", "epilepsy")

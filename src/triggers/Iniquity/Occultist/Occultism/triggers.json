@@ -13,7 +13,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) trembles and \\S+ eyes widen in terror\\. \\S+ looks around \\S+ as if searching for something that isn't there\\.$",
+                            "pattern": "^(?<victim>\\S+) trembles and \\S+ eyes widen in terror\\. \\S+ looks around \\S+ as if searching for something that isn't there\\.$",
                             "type": "regex"
                      }
               ],

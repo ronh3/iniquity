@@ -17,11 +17,11 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^Grey fog begins to rise from the suddenly panicked-looking (\\S+)\\.$",
+                            "pattern": "^Grey fog begins to rise from the suddenly panicked-looking (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'timeloop')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[2].victim, 'timeloop')"
        },
        {
               "name": "Looped Instill",
@@ -37,10 +37,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A grey miasma flares around (\\S+)\\.$",
+                            "pattern": "^A grey miasma flares around (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'confirm', matches[2], 'timeloop')"
+              "script": "raiseEvent('iniquity', 'confirm', matches.victim, 'timeloop')"
        }
 ]

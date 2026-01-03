@@ -13,7 +13,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A bubonis reaches out and strokes the side of (\\S+)'s face, and boils form and rupture in an instant as \\S+ begins hacking up black fluid\\.$",
+                            "pattern": "^A bubonis reaches out and strokes the side of (?<victim>\\S+)'s face, and boils form and rupture in an instant as \\S+ begins hacking up black fluid\\.$",
                             "type": "regex"
                      }
               ],
@@ -33,7 +33,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A chimera throws forward all three of its heads and roars at (\\S+), but \\S+ seems completely unphased\\.$",
+                            "pattern": "^A chimera throws forward all three of its heads and roars at (?<victim>\\S+), but \\S+ seems completely unphased\\.$",
                             "type": "regex"
                      }
               ],
@@ -53,7 +53,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^Many somethings writhe beneath the skin of (\\S+), and the sickening sound of chewing can be heard\\.$",
+                            "pattern": "^Many somethings writhe beneath the skin of (?<victim>\\S+), and the sickening sound of chewing can be heard\\.$",
                             "type": "regex"
                      }
               ],
@@ -73,7 +73,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The gremlin races around and between the legs of (\\S+), \\S+ eyes tracking it as \\S+ sways unsteadily\\.$",
+                            "pattern": "^The gremlin races around and between the legs of (?<victim>\\S+), \\S+ eyes tracking it as \\S+ sways unsteadily\\.$",
                             "type": "regex"
                      }
               ],
@@ -93,7 +93,7 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The worm burrowing into (\\S+) writhes and undulates\\.$",
+                            "pattern": "^The worm burrowing into (?<victim>\\S+) writhes and undulates\\.$",
                             "type": "regex"
                      }
               ],

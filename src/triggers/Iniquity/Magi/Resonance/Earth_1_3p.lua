@@ -1,2 +1,2 @@
-local limb = matches[2]:gsub(" ", "")
-raiseEvent("iniquity", "afflict", matches[3], f"broken{limb}")
+local limb = matches.limb:gsub(" ", "")
+raiseEvent("iniquity", "afflict", matches.victim, f"broken{limb}")

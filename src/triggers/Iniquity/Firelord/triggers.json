@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The skin of (\\S+) is left sensitive and raw\\.$",
+                            "pattern": "^The skin of (?<victim>\\S+) is left sensitive and raw\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'sensitivity')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'sensitivity')"
        },
        {
               "name": "Paralysis",
@@ -33,10 +33,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) convulses, face locked in a rictus of agony\\.$",
+                            "pattern": "^(?<victim>\\S+) convulses, face locked in a rictus of agony\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'paralysis')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'paralysis')"
        }
 ]

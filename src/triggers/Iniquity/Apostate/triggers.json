@@ -13,10 +13,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) doubles over, eyes bulging\\.$",
+                            "pattern": "^(?<victim>\\S+) doubles over, eyes bulging\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', matches[2], 'manaleech', 'slickness')"
+              "script": "raiseEvent('iniquity', 'smart', matches.victim, 'manaleech', 'slickness')"
        }
 ]

@@ -13,10 +13,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^As the lightning bolt courses through (\\S+), a strangely blank expression descends over \\S+ features\\.$",
+                            "pattern": "^As the lightning bolt courses through (?<victim>\\S+), a strangely blank expression descends over \\S+ features\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'stupidity')"
        }
 ]

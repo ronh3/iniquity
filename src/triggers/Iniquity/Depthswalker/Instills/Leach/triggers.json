@@ -17,11 +17,11 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^As the weapon strikes (\\S+), \\S+ seems greatly diminished\\.$",
+                            "pattern": "^As the weapon strikes (?<victim>\\S+), \\S+ seems greatly diminished\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', multimatches[2][2], 'parasite', 'healthleech', 'manaleech')",
+              "script": "raiseEvent('iniquity', 'smart', multimatches[2].victim, 'parasite', 'healthleech', 'manaleech')",
               "children": [
                      {
                             "name": "Leach Loop",
@@ -37,11 +37,11 @@
                             "highlightBG": "#ffff00",
                             "patterns": [
                                    {
-                                          "pattern": "^A grey miasma flares around (\\S+)\\.$",
+                                          "pattern": "^A grey miasma flares around (?<victim>\\S+)\\.$",
                                           "type": "regex"
                                    }
                             ],
-                            "script": "raiseEvent('iniquity', 'smart', matches[2], 'parasite', 'healthleech', 'manaleech')"
+                            "script": "raiseEvent('iniquity', 'smart', matches.victim, 'parasite', 'healthleech', 'manaleech')"
                      }
               ]
        },
@@ -59,10 +59,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^As the scythe comes away, the writhing shadow of (\\S+) clings to the weapon\\.$",
+                            "pattern": "^As the scythe comes away, the writhing shadow of (?<victim>\\S+) clings to the weapon\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', multimatches[1][2], 'parasite', 'healthleech', 'manaleech')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[1].victim, 'parasite', 'healthleech', 'manaleech')"
        }
 ]

@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The protective shield surrounding (\\S+) is blown away by the gale-force winds\\.$",
+                            "pattern": "^The protective shield surrounding (?<victim>\\S+) is blown away by the gale-force winds\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'manaleech')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'manaleech')"
        },
        {
               "name": "Scour Relapse",
@@ -33,11 +33,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A howling wind sweeps over (\\S+), ripping flesh from bone and leaving \\S+ face a bloody ruin\\.$",
+                            "pattern": "^A howling wind sweeps over (?<victim>\\S+), ripping flesh from bone and leaving \\S+ face a bloody ruin\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'disloyalty')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'disloyalty')"
        },
        {
               "name": "Scour Relapse 2",
@@ -53,11 +53,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The ruined face of (\\S+) continues to bleed\\.$",
+                            "pattern": "^The ruined face of (?<victim>\\S+) continues to bleed\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'disloyalty')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'disloyalty')"
        },
        {
               "name": "Strangle Relapse",
@@ -73,11 +73,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^(\\S+) clutches at \\S+ throat, eyes bulging as \\S+ struggles to draw breath\\.$",
+                            "pattern": "^(?<victim>\\S+) clutches at \\S+ throat, eyes bulging as \\S+ struggles to draw breath\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'deadening)"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'deadening)"
        },
        {
               "name": "Strangle Relapse 2",
@@ -93,11 +93,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A dazed look crosses the face of (\\S+)\\.$",
+                            "pattern": "^A dazed look crosses the face of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'deadening', 'disrupted')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'deadening', 'disrupted')"
        },
        {
               "name": "Zephyr Relapse",
@@ -113,11 +113,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A zephyr of icy wind rolls over (\\S+), leaving \\S+ diminished\\.$",
+                            "pattern": "^A zephyr of icy wind rolls over (?<victim>\\S+), leaving \\S+ diminished\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'manaleech')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'manaleech')"
        },
        {
               "name": "Zephyr Relapse 2",
@@ -133,11 +133,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A vacant expression creeps across the features of (\\S+)\\.$",
+                            "pattern": "^A vacant expression creeps across the features of (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'deadening', 'manaleech')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'deadening', 'manaleech')"
        },
        {
               "name": "Zephyr Relapse 3",
@@ -153,10 +153,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^A completely blank expression descends upon (\\S+)\\.$",
+                            "pattern": "^A completely blank expression descends upon (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'deadening', 'manaleech')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'deadening', 'manaleech')"
        }
 ]

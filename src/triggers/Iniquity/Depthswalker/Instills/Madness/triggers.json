@@ -17,11 +17,11 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^As the weapon strikes (\\S+), \\S+ face grows vacant and \\S+ begins to tremble\\.$",
+                            "pattern": "^As the weapon strikes (?<victim>\\S+), \\S+ face grows vacant and \\S+ begins to tremble\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', multimatches[2][2], 'shadowmadness', 'vertigo', 'hallucinations')",
+              "script": "raiseEvent('iniquity', 'smart', multimatches[2].victim, 'shadowmadness', 'vertigo', 'hallucinations')",
               "children": [
                      {
                             "name": "Madness Loop",
@@ -37,11 +37,11 @@
                             "highlightBG": "#ffff00",
                             "patterns": [
                                    {
-                                          "pattern": "^A grey miasma flares around (\\S+)\\.$",
+                                          "pattern": "^A grey miasma flares around (?<victim>\\S+)\\.$",
                                           "type": "regex"
                                    }
                             ],
-                            "script": "raiseEvent('iniquity', 'smart', matches[2], 'shadowmadness', 'vertigo', 'hallucinations')"
+                            "script": "raiseEvent('iniquity', 'smart', matches.victim, 'shadowmadness', 'vertigo', 'hallucinations')"
                      }
               ]
        },
@@ -59,10 +59,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The head of (\\S+) snaps back as if struck and \\S+ eyes roll madly\\.$",
+                            "pattern": "^The head of (?<victim>\\S+) snaps back as if struck and \\S+ eyes roll madly\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', matches[2], 'shadowmadness', 'vertigo', 'hallucinations')"
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'shadowmadness', 'vertigo', 'hallucinations')"
        }
 ]

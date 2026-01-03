@@ -17,11 +17,11 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^As the weapon strikes (\\S+), it blazes with incandescent white flame\\.$",
+                            "pattern": "^As the weapon strikes (?<victim>\\S+), it blazes with incandescent white flame\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'smart', multimatches[2][2], 'justice', 'retribution')",
+              "script": "raiseEvent('iniquity', 'smart', multimatches[2].victim, 'justice', 'retribution')",
               "children": [
                      {
                             "name": "Retribution Loop",
@@ -37,11 +37,11 @@
                             "highlightBG": "#ffff00",
                             "patterns": [
                                    {
-                                          "pattern": "^A grey miasma flares around (\\S+)\\.$",
+                                          "pattern": "^A grey miasma flares around (?<victim>\\S+)\\.$",
                                           "type": "regex"
                                    }
                             ],
-                            "script": "raiseEvent('iniquity', 'smart', matches[2], 'justice', 'retribution')"
+                            "script": "raiseEvent('iniquity', 'smart', matches.victim, 'justice', 'retribution')"
                      }
               ]
        },
@@ -63,10 +63,10 @@
                             "type": "startOfLine"
                      },
                      {
-                            "pattern": "^The white flame leaps from the scythe to (\\S+), blazing with a terrible intensity before guttering out\\.$",
+                            "pattern": "^The white flame leaps from the scythe to (?<victim>\\S+), blazing with a terrible intensity before guttering out\\.$",
                             "type": "regex"
                      }
               ],
-              "script": "raiseEvent('iniquity', 'afflict', multimatches[2][2], 'justice', 'retribution')"
+              "script": "raiseEvent('iniquity', 'afflict', multimatches[2].victim, 'justice', 'retribution')"
        }
 ]

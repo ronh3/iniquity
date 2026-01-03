@@ -13,11 +13,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The air thrums about \\S+ as a flurry of rocks materialise to bombard (\\S+)\\.$",
+                            "pattern": "^The air thrums about \\S+ as a flurry of rocks materialise to bombard (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'clumsiness')"
        },
        {
               "name": "Freeze 3p",
@@ -33,11 +33,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ raises a hand towards (\\S+) and blasts \\S+ with cold, frigid air\\.$",
+                            "pattern": "^\\S+ raises a hand towards (?<victim>\\S+) and blasts \\S+ with cold, frigid air\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'frozen')"
        },
        {
               "name": "Mudslide 3p",
@@ -53,11 +53,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ weaves earth and water and a torrent of thick mud thunders forth to roll over (\\S+), knocking \\S+ sprawling\\.$",
+                            "pattern": "^\\S+ weaves earth and water and a torrent of thick mud thunders forth to roll over (?<victim>\\S+), knocking \\S+ sprawling\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'slickness')"
        },
        {
               "name": "Fulminate 3p",
@@ -73,11 +73,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ clicks \\S+ fingers and a bolt of lightning strikes from the air in a fulminous flash to transfix (\\S+)\\.$",
+                            "pattern": "^\\S+ clicks \\S+ fingers and a bolt of lightning strikes from the air in a fulminous flash to transfix (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'smart', matches.victim, 'fulminated', 'epilepsy', 'paralysis')"
        },
        {
               "name": "Dehydrate 3p",
@@ -93,11 +93,11 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^The skin of (\\S+) begins to dry and crack as \\S+ grows pale\\.$",
+                            "pattern": "^The skin of (?<victim>\\S+) begins to dry and crack as \\S+ grows pale\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict_n', matches.victim, 'weariness', 'nausea')"
        },
        {
               "name": "Magma 3p",
@@ -113,10 +113,10 @@
               "highlightBG": "#ffff00",
               "patterns": [
                      {
-                            "pattern": "^\\S+ weaves fire and earth in a complex pattern and bubbling magma boils into existence in a searing tide to crash down upon (\\S+)\\.$",
+                            "pattern": "^\\S+ weaves fire and earth in a complex pattern and bubbling magma boils into existence in a searing tide to crash down upon (?<victim>\\S+)\\.$",
                             "type": "regex"
                      }
               ],
-              "script": ""
+              "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'scalded')"
        }
 ]

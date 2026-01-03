@@ -13,12 +13,12 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^(\\S+) suddenly sways, \\S+ eyes drooping as \\S+ sags\\.$",
+        "pattern": "^(?<victim>\\S+) suddenly sways, \\S+ eyes drooping as \\S+ sags\\.$",
         "type": "regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'weariness')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'weariness')"
   },
   {
     "name": "Impatience",
@@ -34,12 +34,12 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^(\\S+) gasps a great lungful of air, \\S+ face flushing with sudden colour\\.$",
+        "pattern": "^(?<victim>\\S+) gasps a great lungful of air, \\S+ face flushing with sudden colour\\.$",
         "type": "regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'impatience')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'impatience')"
   },
   {
     "name": "Epilepsy",
@@ -55,16 +55,16 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^As the logograph becomes fully formed it burns with a terrible crimson light, and (\\S+) recoils back from its arcane brilliance\\.$",
+        "pattern": "^As the logograph becomes fully formed it burns with a terrible crimson light, and (?<victim>\\S+) recoils back from its arcane brilliance\\.$",
         "type": "regex"
       },
       {
-        "pattern":"^The glowing logograph upon the brow of (\\S+) suddenly explodes into searing red light, winking out almost immediately\\.$",
+        "pattern":"^The glowing logograph upon the brow of (?<victim>\\S+) suddenly explodes into searing red light, winking out almost immediately\\.$",
         "type":"regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'epilepsy')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'epilepsy')"
   },
   {
     "name": "Haemophilia",
@@ -80,16 +80,16 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^Even as the logograph becomes fully formed it leaps from the air to (\\S+), ephemeral claws plunging into \\S+ chest\\.$",
+        "pattern": "^Even as the logograph becomes fully formed it leaps from the air to (?<victim>\\S+), ephemeral claws plunging into \\S+ chest\\.$",
         "type": "regex"
       },
       {
-        "pattern":"^Ephemeral claws suddenly thrust from the chest of (\\S+), their ghostly edges slicing and rending\\.$",
+        "pattern":"^Ephemeral claws suddenly thrust from the chest of (?<victim>\\S+), their ghostly edges slicing and rending\\.$",
         "type":"regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'haemophilia')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'haemophilia')"
   },
   {
     "name": "Asthma",
@@ -105,16 +105,16 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^As the logograph becomes fully formed it leaps for (\\S+), ephemeral fangs closing about \\S+ throat\\.$",
+        "pattern": "^As the logograph becomes fully formed it leaps for (?<victim>\\S+), ephemeral fangs closing about \\S+ throat\\.$",
         "type": "regex"
       },
       {
-        "pattern":"^(\\S+) coughs, \\S+ face starting to turn blue\\.$",
+        "pattern":"^(?<victim>\\S+) coughs, \\S+ face starting to turn blue\\.$",
         "type":"regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'asthma')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'asthma')"
   },
   {
     "name": "Addiction",
@@ -130,16 +130,16 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^Something undulates grotesquely within the stomach of (\\S+), and a ravenous gleam enters \\S+ eyes\\.$",
+        "pattern": "^Something undulates grotesquely within the stomach of (?<victim>\\S+), and a ravenous gleam enters \\S+ eyes\\.$",
         "type": "regex"
       },
       {
-        "pattern":"^Something writhes within the stomach of (\\S+), \\S+ face contorting in a strangely hungry expression\\.$",
+        "pattern":"^Something writhes within the stomach of (?<victim>\\S+), \\S+ face contorting in a strangely hungry expression\\.$",
         "type":"regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'addiction')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'addiction')"
   },
   {
     "name": "Clumsiness",
@@ -155,16 +155,16 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^As the logograph becomes fully formed it suddenly shatters, (\\S+) staggering drunkenly backwards\\.$",
+        "pattern": "^As the logograph becomes fully formed it suddenly shatters, (?<victim>\\S+) staggering drunkenly backwards\\.$",
         "type": "regex"
       },
       {
-        "pattern":"^(\\S+) staggers suddenly, eyes rolling back in \\S+ skull\\.$",
+        "pattern":"^(?<victim>\\S+) staggers suddenly, eyes rolling back in \\S+ skull\\.$",
         "type":"regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'clumsiness')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'clumsiness')"
   },
   {
     "name": "Scytherus",
@@ -180,11 +180,11 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^The logograph is still solidifying as it leaps from the air to (\\S+), an insubstantial stinger rising and falling thrice in terrible succession before the logograph is gone\\.$",
+        "pattern": "^The logograph is still solidifying as it leaps from the air to (?<victim>\\S+), an insubstantial stinger rising and falling thrice in terrible succession before the logograph is gone\\.$",
         "type": "regex"
       }
       
     ],
-    "script": "raiseEvent('iniquity', 'afflict', matches[2], 'scytherus')"
+    "script": "raiseEvent('iniquity', 'afflict', matches.victim, 'scytherus')"
   }
 ]

@@ -4,7 +4,7 @@ Third-party class lines that raise an event, allowing any aff tracking to take a
 ### Usage:
 
 `raiseEvent("iniquity", method, target, affs)`
-eg. `raiseEvent("iniquity", "afflict", matches[2], "paralysis", "dizziness")`
+eg. `raiseEvent("iniquity", "afflict", matches.victim, "paralysis", "dizziness")`
 
 * `"afflict"` method is "all of these affs"
 * `"smart"` is "afflict x then y then z"
