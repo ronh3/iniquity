@@ -4,7 +4,7 @@
        "description": "Tracks 3rd party afflictions.",
        "version": "1.0.1",
        "author": "",
-       "icon": "",
+       "icon": "iniquity.jpg",
        "dependencies": "",
        "outputFile": false
 }
